@@ -24,7 +24,7 @@ const hasPlayerWon = (playerSelection, simulationSelection) => (
 );
 
 /**
- * 
+ * Generates a random number with respect to provided boundaries.
  * @param {Integer} start 
  * @param {Integer} limit 
  * @returns {Integer} returns a randomized number in range of parameters :start & :limit
@@ -37,20 +37,20 @@ const getIndex = (start=0, limit=GAME_TOOLS.length) => {
 }
 
 /**
- * 
+ * Simulates a computer input to the game.
  * @returns {String} returns the computer simulated game input/move.
  */
 const getComputerChoice = () => GAME_TOOLS[getIndex()];
 
 /**
- * 
+ * Compiles the play round results and determines a fitting outcome.
  * @param {String} playerSelection user input that will be used to determine the fate of round.
  * @param {String} computerSelection computer/simulated input that will be used to determine the fate of round.
  * @returns {String} A declaration statement of the outcome of the play round
  */
 const playRound = (playerSelection, computerSelection) => {
-  // Restrict user game input to fall into the accepted standards
-  // Fail player when cheating
+  // Prevent player input from falling outside the accepted standards.
+  // Fail player on cheating attempt.
   if (GAME_TOOLS.indexOf(playerSelection) === -1) {
     return `You lost! No cheating...:(:( ${playerSelection} is forbidden`
   }
@@ -80,15 +80,15 @@ const game = () => {
 
   for (let j = 1; j < 6; j++) {
     const playerSelection = prompt(`Select Your Tool: ( ${GAME_TOOLS.join(' | ')} ) `);
-    const outcome = playRound(playerSelection, getComputerChoice());
+    const roundOutcome = playRound(playerSelection, getComputerChoice());
 
-    if (outcome.startsWith('You won!')) {
+    if (roundOutcome.startsWith('You won!')) {
       scoreBoard.player++
-    } else if (outcome.startsWith('You lost!')) {
+    } else if (roundOutcome.startsWith('You lost!')) {
       scoreBoard.computer++
     }
 
-    console.log(`Round #${j}: `, outcome);
+    console.log(`Round #${j}: `, roundOutcome);
   }
 
   if (scoreBoard.player > scoreBoard.computer) {
