@@ -2,7 +2,7 @@
  * These are available Game Tools.
  * On each Play-Round, every player will permitted to select a tool of choice against their opponent.
  */
-const GAME_TOOLS = [ 'Rock', 'Paper', 'Scissors' ];
+const GAME_TOOLS = [ 'rock', 'paper', 'scissors' ];
 
 /**
  * Player possible win scenarios given a 3 size tools box
@@ -49,6 +49,12 @@ const getComputerChoice = () => GAME_TOOLS[getIndex()];
  * @returns {String} A declaration statement of the outcome of the play round
  */
 const playRound = (playerSelection, computerSelection) => {
+  // Restrict user game input to fall into the accepted standards
+  // Fail player when cheating
+  if (GAME_TOOLS.indexOf(playerSelection) === -1) {
+    return `You lost! No cheating...:(:( ${playerSelection} is forbidden`
+  }
+
   const playerMove = playerSelection.toLowerCase();
   const simulatedMove = computerSelection.toLowerCase();
 
@@ -73,7 +79,7 @@ const game = () => {
   }
 
   for (let j = 1; j < 6; j++) {
-    const playerSelection = prompt(`Select Your Tool: (Available are [ ${GAME_TOOLS.join(' | ')} ]) `);
+    const playerSelection = prompt(`Select Your Tool: ( ${GAME_TOOLS.join(' | ')} ) `);
     const outcome = playRound(playerSelection, getComputerChoice());
 
     if (outcome.startsWith('You won!')) {
