@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Odin: Rock | Paper | Scissors</title>
+</head>
+
+<body>
+  <div id="main">
+    <h1>Rock Paper Scissors Game</h1>
+    <p>
+      <i>Rock, paper, scissors (also known as Rochambeau, Roshambo, or Janken) is a fun and easy hand game that anyone
+        can
+        learn and enjoy.</i>
+    </p>
+
+    <div id="rules">
+      <div role="button" id="toggle-rules">
+        <span>Instructions</span>
+        <i class="arrow up"></i>
+      </div>
+
+      <div id="rules-content">
+        <section>
+          <h2>📜 Constraints</h2>
+          <ol>
+            <li>Only <span class="code">rock</span>, <span class="code">paper</span>, & <span
+                class="code">scissors</span>
+              are allowed game inputs.</li>
+            <li>Cheating attempt is an automatic <span class="code">failure</span>.</li>
+            <li>You win the game if your score is greater than that of the <span class="code">opposition</span>.</li>
+            <li>Play input is case-insensitive, meaning, <span class="code">rock</span> == <span
+                class="code">ROCK</span>
+              == <span class="code">Rock</span>.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>🎬 Scenarios</h2>
+          <ol>
+            <li>
+              <b>TIE: </b>
+              A play round is <span class="code">Tied</span> when both players draw the same inputs. For example, <span
+                class="code">rock</span>+<span class="code">rock</span>, <span class="code">scissors</span>+<span
+                class="code">scissors</span>, or <span class="code">paper</span>+<span class="code">paper</span>.
+            </li>
+            <li>
+              <b>WIN: </b>
+              A play round is <span class="code">Won</span> when it draws <span class="code">rock</span>+<span
+                class="code">scissors</span>, <span class="code">paper</span>+<span class="code">rock</span>, or <span
+                class="code">scissors</span>+<span class="code">paper</span>,
+              respectively to <span class="code">player</span>+<span class="code">computer</span>.
+            </li>
+            <li>
+              <b>LOST: </b>
+              A play round is <span class="code">Lost</span> when both scenarios <span class="code">1</span> & <span
+                class="code">2</span> fail.
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>🙋 How To Play</h2>
+          <ol>
+            <li>
+              From this page, click right & select <span class="code">Inspect</span> option
+            </li>
+            <li>
+              From the <span class="code">Inspect</span> panel, switch to <span class="code">Console</span> tab.
+            </li>
+            <li>
+              In the <span class="code">Console</span>, run<br>
+              <code>game()</code>
+            </li>
+            <li>You will be prompted to enter your input.</li>
+            <li>The game is concluded after <span class="code">5 trials/rounds</span>.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>💡 Tips</h2>
+
+          <p>Have fun!</p>
+        </section>
+      </div>
+    </div>
+
+    <section id="game-board">
+      <h2>Let's Play</h2>
+      <div id="game-score">
+        <div class="game-user-score player-score">
+          <span>Player</span>
+          <span>0</span>
+        </div>
+        <div class="game-user-score opponent-score">
+          <span>0</span>
+          <span>Opponent</span>
+        </div>
+      </div>
+      <div id="game-results"></div>
+      <div id="game-tools">
+        <button id="rock" class="game-selection">👊</button>
+        <button id="paper" class="game-selection">🫱</button>
+        <button id="scissors" class="game-selection">✌️</button>
+      </div>
+      <div id="game-controls">
+        <button id="game-reset">Restart</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="rps-core.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
