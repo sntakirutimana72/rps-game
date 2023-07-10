@@ -15,7 +15,7 @@ Rock, paper, scissors (also known as Rochambeau, Roshambo, or Janken) is a fun a
 
 1. `rock`, `paper`, & `scissors` are the only game inputs allowed.
 1. Cheating attempt is an automatic `failure`.
-2. You win the game if your score is greater than that of the `opposition`.
+2. You win the game if you reach the score of `5` before your opponent.
 3. Play input is case-insensitive, meaning, `rock` == `ROCK` == `Rock`.
 
 
@@ -28,16 +28,11 @@ Rock, paper, scissors (also known as Rochambeau, Roshambo, or Janken) is a fun a
 3. **LOST**: A play round is `Lost` when both scenarios `1` & `2` fail.
 
 
-## 🙋 How To Play
+## 🙋 Let's play
 
-- Open the `index.html` in your browser
-- From your browser, open `developer tools` and switch to `Console` tab.
-- In the same browser `Console`, run
-    ```shell
-        > game()
-    ```
-- You will be prompted to enter your input.
-- The game is concluded after *`5 trials/rounds`*.
+1. From the three `Play buttons` (`rock`<>`fist`, `paper`<>`hand`, `scissor`<>`Two fingers`), select one which best suits your choice. You should be able to see the result of the play round and the current game score, just above the `Play buttons` belt.
+2. Repeat step `1` until the game is concluded.
+3. Press the `Restart` button anytime you wish to reset the game.
 
 
 ## 💡 Tips
