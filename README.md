@@ -1,9 +1,9 @@
 ![EDUCATIONAL](https://img.shields.io/badge/EDUCATIONAL-o)
 
 
-# Odin Rock Paper Scissors
+# Game: Rock Paper Scissors
 
-Rock, paper, scissors (also known as Rochambeau, Roshambo, or Janken) is a fun and easy hand game that anyone can learn and enjoy.
+Rock-paper-scissors game (aka Rochambeau, Roshambo, or Janken) is a fun and easy hand game that anyone can learn and enjoy.
 
 
 ## 🛠️ Built With
